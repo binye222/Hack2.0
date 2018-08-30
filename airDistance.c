@@ -29,8 +29,10 @@ changeInLongitude is the difference between location B’s longitude and locatio
    latitudeB = latitudeB / 180 * PI;
 
    double distance;
-   distance = arccos(sin('latitudeA')sin('latitudeB') + cos('latitudeA')cos('latitudeB')cos('changeInLongitude')) * EARTH_RADIUS;
+   distance = acos(sin(latitudeA)*sin(latitudeB) + cos(latitudeA)*cos(latitudeB)*cos(changeInLongitude)) * EARTH_RADIUS;
 
    printf(" Origin:          (%f, %f)\n", &latitudeA, &longitudeA);
    printf(" Desitination:    (%f,%f)\n", &latitudeB, &longitudeB);
    printf(" Air Distance is %f \n", &distance);
+   return 0;
+ }
